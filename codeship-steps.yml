@@ -1,0 +1,12 @@
+- name: version
+  service: terraform
+  command: version
+- name: init
+  service: terraform
+  command: init --input=false ./
+- name: validate
+  service: terraform
+  command: validate ./
+- name: plan
+  service: terraform
+  command: plan --input=false --out=./codeship.tfplan
